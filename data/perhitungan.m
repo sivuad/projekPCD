@@ -2,36 +2,8 @@ clear
 clc
 close all
 
-%membaca citra
-img = imread('tomat.jpg');
-img_gray = rgb2gray(img);
-img_bw = imbinarize(img_gray);
-
-% ekstraksi ciri warna RGB
-R = img(:,:,1);
-G = img(:,:,2);
-B = img(:,:,3);
-img_Red = cat(3,R,G.*0,B.*0);
-img_Green = cat(3,R.*0,G,B.*0);
-img_Blue = cat(3,R.*0,G.*0,B);
-
-subplot(3,2,1);
-imshow(img);
-subplot(3,2,2);
-imshow(img_Red);
-subplot(3,2,3);
-imshow(img_Green);
-subplot(3,2,4);
-imshow(img_Blue);
-subplot(3,2,5);
-imshow(img_bw);
-subplot(3,2,6);
-imshow(img_gray);
-
 %Menghitung nilai HIS
-%input_gambar = input('Input Gambar: '); 
-A= imread ('tomat.jpg'); 
-RGB= im2double(A);
+A= imread ('data'); 
 Red= RGB(:,:,1); 
 Green= RGB(:,:,2); 
 Blue= RGB(:,:,3); 
