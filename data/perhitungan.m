@@ -3,7 +3,8 @@ clc
 close all
 
 %Menghitung nilai HIS
-A= imread ('data'); 
+A= imread ('uji1.jpg'); 
+RGB = im2double(A);
 Red= RGB(:,:,1); 
 Green= RGB(:,:,2); 
 Blue= RGB(:,:,3); 
